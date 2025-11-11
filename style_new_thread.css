@@ -1,0 +1,128 @@
+/* =========================================================
+   新規スレッド作成画面用スタイル
+   ========================================================= */
+
+/* ------------------------------
+   ページ全体
+   ------------------------------ */
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    background-color: #ffffff;   /* 背景を白に統一 */
+    color: #222;                 /* 標準文字色（やや濃いグレー） */
+    margin: 0;                   /* ページ外余白なし */
+    padding: 0;                  /* ページ内余白なし */
+}
+
+/* ------------------------------
+   コンテナ（中央寄せ）
+   ------------------------------ */
+.container {
+    width: 90%;                  /* 横幅を全体の90%に */
+    max-width: 800px;            /* 最大幅を800pxに制限 */
+    margin: 60px auto;           /* 上下に60px・左右中央寄せ配置 */
+    text-align: center;          /* コンテンツを中央寄せ */
+}
+
+/* ------------------------------
+   ページタイトル
+   ------------------------------ */
+h1 {
+    text-align: center;          /* 中央寄せ配置 */
+    font-size: 36px;             /* 大きめの文字サイズ */
+    font-weight: bold;           /* 太字 */
+    margin-bottom: 35px;         /* 下に余白 */
+}
+
+/* ------------------------------
+   フォーム全体
+   ------------------------------ */
+form {
+    border: 1.5px solid #333;    /* 濃いグレー枠線で囲む */
+    border-radius: 6px;          /* 角を丸く */
+    padding: 25px 30px;          /* 内側余白 */
+    text-align: left;            /* 入力欄を左寄せ配置 */
+    background: #fff;            /* 背景白 */
+}
+
+/* ------------------------------
+   投稿者名＋タイトル欄
+   ------------------------------ */
+.form-header {
+    display: flex;               /* 横並び配置 */
+    align-items: center;         /* 縦中央揃え */
+    margin-bottom: 15px;         /* 下に余白 */
+    gap: 8px;                    /* 要素間の間隔 */
+}
+
+/* 投稿者名ボックス */
+.username-box {
+    font-weight: bold;           /* 太字で強調 */
+    border: 1px solid #333;      /* 枠線 */
+    background-color: #f0f0f0;   /* 背景グレー（編集不可感） */
+    padding: 8px 12px;           /* 内側余白 */
+    border-radius: 4px;          /* 角を丸く */
+    min-width: 80px;             /* 最小幅 */
+    text-align: center;          /* 中央寄せ */
+}
+
+/* スレッドタイトル入力欄 */
+.title-input {
+    flex: 1;                     /* 残りスペースを全て使う */
+    padding: 8px 10px;           /* 内側余白 */
+    border: 1px solid #333;      /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    font-size: 14px;             /* 標準文字サイズ */
+    box-sizing: border-box;      /* paddingを幅に含める */
+}
+
+/* ------------------------------
+   投稿内容入力欄
+   ------------------------------ */
+.body-input {
+    width: 100%;                 /* 横幅いっぱい */
+    height: 150px;               /* 固定の高さ */
+    padding: 8px 10px;           /* 内側余白 */
+    border: 1px solid #333;      /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    font-size: 14px;             /* 標準文字サイズ */
+    resize: vertical;            /* 縦方向のみサイズ変更可 */
+    box-sizing: border-box;      /* paddingを幅に含める */
+    margin-bottom: 20px;         /* 下に余白 */
+    line-height: 1.5;            /* 行間をやや広く */
+}
+
+/* ------------------------------
+   ボタンエリア
+   ------------------------------ */
+.button-group {
+    display: flex;               /* 横並び配置 */
+    justify-content: center;     /* 中央寄せ */
+    gap: 40px;                   /* ボタン間を広く取る */
+    margin-top: 10px;            /* 上に余白 */
+}
+
+/* 共通ボタン */
+.btn {
+    padding: 8px 24px;           /* 内側余白（大きめ） */
+    font-size: 16px;             /* やや大きめの文字 */
+    border: 1.5px solid #333;    /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    background: #fff;            /* 背景白 */
+    color: #000;                 /* 文字黒 */
+    cursor: pointer;             /* カーソル変更 */
+    text-decoration: none;       /* 下線なし */
+}
+
+.btn:hover {
+    background: #f0f0f0;         /* ホバー時に薄いグレーへ */
+}
+
+/* ------------------------------
+   エラーメッセージ
+   ------------------------------ */
+.error {
+    color: #b00020;              /* 赤文字で強調 */
+    text-align: center;          /* 中央寄せ */
+    font-weight: bold;           /* 太字で強調 */
+    margin-top: 10px;            /* 上に余白 */
+}

@@ -1,0 +1,190 @@
+/* =========================================================
+   プロフィール編集画面用スタイル
+   ========================================================= */
+
+/* ------------------------------
+   ページ全体
+   ------------------------------ */
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    background-color: #ffffff;   /* 背景白 */
+    color: #222;                 /* 標準文字色（濃いグレー） */
+    margin: 0;                   /* ページ外余白なし */
+    padding: 0;                  /* ページ内余白なし */
+}
+
+/* ------------------------------
+   コンテナ（中央寄せ）
+   ------------------------------ */
+.container {
+    width: 90%;                  /* 横幅90% */
+    max-width: 800px;            /* 最大幅800px */
+    margin: 50px auto;           /* 上下50px・中央寄せ配置 */
+    padding: 30px;               /* 内側余白 */
+    border: 1.5px solid #ccc;    /* 薄いグレーの枠線 */
+    border-radius: 10px;         /* 角をやや丸く */
+    background: #fff;            /* 背景白 */
+}
+
+/* ------------------------------
+   ページタイトル
+   ------------------------------ */
+h1 {
+    text-align: center;          /* 中央寄せ配置 */
+    font-size: 28px;             /* 標準よりやや大きめ */
+    font-weight: bold;           /* 太字で強調 */
+    margin-bottom: 30px;         /* 下に余白 */
+}
+
+/* ------------------------------
+   入力フォーム（グリッド配置）
+   ------------------------------ */
+.form-group {
+    display: grid;               /* グリッドレイアウト(セル配置みたいな表)を使用 */
+    grid-template-columns: 150px 1fr; /* 左列：ラベル／右列：入力欄 */
+    align-items: center;         /* 縦方向中央揃え */
+    column-gap: 15px;            /* 列間の間隔 */
+    margin-bottom: 25px;         /* 下に余白 */
+}
+
+/* ------------------------------
+   ラベル（左側）
+   ------------------------------ */
+.form-group label {
+    font-weight: bold;           /* 太字で強調 */
+    text-align: right;           /* 右寄せ配置 */
+    margin-bottom: 2px;          /* 下に少し余白 */
+}
+
+/* ------------------------------
+   入力欄共通
+   ------------------------------ */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;                 /* 横幅いっぱいに広げる */
+    padding: 8px;                /* 内側余白 */
+    font-size: 15px;             /* 標準文字サイズ */
+    border: 1px solid #aaa;      /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    background-color: #fafafa;   /* 背景を薄いグレーに */
+    box-sizing: border-box;      /* paddingを幅に含める */
+}
+
+/* ------------------------------
+   趣味選択エリア
+   ------------------------------ */
+.hobby-options {
+    display: flex;               /* 横並び配置 */
+    flex-wrap: wrap;             /* 折り返し対応 */
+    gap: 10px 15px;              /* 行・列の間隔 */
+}
+
+/* 趣味ボタンの外観 */
+.hobby-options label {
+    display: inline-flex;        /* 中央寄せのためにflex使用 */
+    align-items: center;         /* 縦中央 */
+    justify-content: center;     /* 横中央 */
+    padding: 10px 18px;          /* 内側余白 */
+    border: 1.5px solid #aaa;    /* 枠線 */
+    border-radius: 6px;          /* 角を丸く */
+    background-color: #f7f7f7;   /* 背景薄グレー */
+    font-size: 14px;             /* 少し小さめ文字 */
+    cursor: pointer;             /* カーソルを指マークに */
+    user-select: none;           /* テキスト選択を無効化 */
+}
+
+/* チェック状態 */
+.hobby-options input[type="checkbox"]:checked + span {
+    color: #ffffff;              /* 白文字 */
+}
+
+/* ボタン全体を変える */
+.hobby-options input[type="checkbox"]:checked + span,
+.hobby-options input[type="checkbox"]:checked + span::before,
+.hobby-options input[type="checkbox"]:checked {
+    background-color: #8b8b8b;
+    color: #fff;
+}
+
+/* ラベル全体を色変化対象にする */
+.hobby-options input[type="checkbox"]:checked + span {
+    background-color: transparent; /* span単体背景は透明に */
+}
+
+/* チェックボックスを非表示 */
+.hobby-options input[type="checkbox"] {
+    display: none;
+}
+
+/* チェックボックスの代わりの表示要素 */
+.hobby-options label span {
+    display: inline-block;
+}
+
+/* チェックされたときラベル背景変更 */
+.hobby-options input[type="checkbox"]:checked + span,
+.hobby-options label:has(input[type="checkbox"]:checked) {
+    background-color: #8b8b8b;
+    color: #fff;
+    border-color: #8b8b8b;
+}
+
+/* ------------------------------
+   注釈（補足メッセージ）
+   ------------------------------ */
+.note {
+    grid-column: 1 / 2;          /* ラベル列に配置 */
+    grid-row: 2;                 /* 下段に配置 */
+    text-align: right;           /* ラベルに揃えて右寄せ */
+    color: #d9534f;              /* 赤系で注意を表現 */
+    font-size: 13px;             /* 小さめ文字 */
+    margin-top: 3px;             /* 上に少し余白 */
+    line-height: 1.4;            /* 行間をやや広めに */
+}
+
+/* ------------------------------
+   コメント欄
+   ------------------------------ */
+#comment {
+    resize: vertical;            /* 高さのみ変更可 */
+    height: 80px;                /* 初期高さ設定 */
+}
+
+/* ------------------------------
+   ボタンエリア
+   ------------------------------ */
+.btn-area {
+    display: flex;               /* 横並び配置 */
+    justify-content: center;     /* 中央寄せ */
+    gap: 60px;                   /* 戻る／更新の間隔を広めに */
+    margin-top: 30px;            /* 上に余白 */
+}
+
+/* 共通ボタンスタイル */
+.btn {
+    display: inline-block;       /* 横並び配置 */
+    padding: 10px 26px;          /* 内側余白（広め） */
+    font-size: 16px;             /* 標準文字サイズ */
+    border: 1.5px solid #333;    /* 濃いグレーの枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    background: #fff;            /* 背景白 */
+    color: #000;                 /* 文字黒 */
+    cursor: pointer;             /* ホバー時のポインター */
+    text-decoration: none;       /* 下線なし */
+}
+
+/* ホバー時の色変化 */
+.btn:hover {
+    background-color: #e0e0e0;   /* ホバー時に淡いグレーへ */
+}
+
+/* ------------------------------
+   エラーメッセージ
+   ------------------------------ */
+.error {
+    color: #b00020;              /* 赤文字で強調 */
+    text-align: center;          /* 中央寄せ */
+    font-weight: bold;           /* 太字で強調 */
+    margin-top: 10px;            /* 上に余白 */
+}

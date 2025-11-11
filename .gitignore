@@ -1,0 +1,69 @@
+# XAMPP関連
+.htaccess.local
+php.ini.local
+
+# データベース設定（機密情報を含むファイル）
+db.php
+db/db.php
+config/database.php
+*.local.php
+
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# ログファイル
+*.log
+logs/
+error_log
+
+# 一時ファイル
+*.tmp
+*.temp
+*.cache
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE関連
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# アップロードファイル（必要に応じて）
+uploads/
+storage/
+files/
+
+# バックアップファイル
+*.bak
+*.backup
+*.old
+*.zip
+*.tar.gz
+
+# コンパイル済みファイル
+*.class
+*.o
+*.so
+
+# OS関連
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# その他
+node_modules/
+vendor/
+composer.lock
+

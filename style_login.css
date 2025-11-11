@@ -1,0 +1,108 @@
+/* =============================
+   ログインページ用スタイル
+   ============================= */
+
+/* ページ全体 */
+body {
+    font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* ページ全体を包み、中央寄せするラッパー */
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
+    justify-content: center; /* 垂直（上下）中央寄せ */
+    align-items: center;     /* 水平（左右）中央寄せ */
+    padding: 20px;           /* 画面端の最小余白 */
+    box-sizing: border-box;
+}
+
+/* ▼▼▼ この .app-icon の定義を追加 ▼▼▼ */
+/* グレー枠の外のアイコン */
+.app-icon {
+    width: 70px; /* アイコンのサイズ (お好みで調整してください) */
+    height: auto;
+    margin-bottom: 60px; /* アイコンとタイトルの間隔 */
+}
+
+/* グレー枠の外のアプリタイトル*/
+.app-title{
+    text-align: center;
+    font-size: 60px;
+}
+
+/* グレー枠の外のアプリタイトル*/
+.app-title{
+    text-align: center;
+    font-size: 50px; /* h1 (50px) よりも大きく目立たせる */
+    font-weight: bold;
+    color: #222; /* 濃いグレー */
+    margin-bottom: 50px; /* グレー枠との間隔 */
+}
+
+/* メイン枠 */
+.login-container {
+    width: 90%;
+    max-width: 1000px;
+    padding: 50px 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background: #dbdbdb;
+}
+
+/* 見出し */
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+/* ラベルと入力欄 */
+label {
+    width: 80%;
+    display: block;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+/* ボタン */
+button, .register-btn {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* エラーメッセージ */
+.error {
+    color: #b00020;
+    margin-bottom: 25px;
+    text-align: center;
+}

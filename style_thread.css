@@ -1,0 +1,322 @@
+/* =========================================================
+   スレッド一覧画面用スタイル
+   ========================================================= */
+
+/* ------------------------------
+   ページ全体
+   ------------------------------ */
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; /* 日本語でも読みやすいフォント */
+    background-color: #ffffff;   /* ページ背景色（白） */
+    color: #222;                 /* 標準文字色（やや濃いグレー） */
+    margin: 0;                   /* ページ外余白をなしに */
+    padding: 0;                  /* ページ内余白をなしに */
+}
+
+/* ------------------------------
+   コンテナ（全体中央寄せ）
+   ------------------------------ */
+.container {
+    width: 90%;                  /* 横幅を全体の90%に制限 */
+    max-width: 1000px;           /* 最大幅を1000pxに制限 */
+    margin: 40px auto;           /* 上下40px・左右中央寄せ配置 */
+}
+
+/* ------------------------------
+   ページタイトル
+   ------------------------------ */
+h1 {
+    text-align: center;          /* 中央寄せ配置 */
+    font-size: 38px;             /* 大きめの文字サイズ */
+    margin-bottom: 25px;         /* 下に余白 */
+}
+
+/* ------------------------------
+   ナビゲーションエリア
+   ------------------------------ */
+.nav-links {
+    display: flex;               /* フレックスボックス配置 */
+    flex-wrap: wrap;             /* 折り返し可 */
+    justify-content: center;     /* 中央寄せ */
+    align-items: center;         /* 縦中央揃え */
+    gap: 10px;                   /* 要素間の間隔 */
+    padding-bottom: 10px;        /* 下側の余白 */
+    margin-bottom: 25px;         /* 下に余白 */
+    border-bottom: 2px solid #ccc; /* 下線で区切る */
+}
+
+.nav-links p {
+    margin: 0;                   /* 余白を削除 */
+    font-weight: bold;           /* 太字に */
+}
+
+/* ------------------------------
+   共通ボタン
+   ------------------------------ */
+.btn {
+    padding: 6px 14px;           /* 内側余白 */
+    border: 1px solid #555;      /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    background: #f5f5f5;         /* 背景色（薄いグレー） */
+    color: #222;                 /* 文字色（濃いグレー） */
+    text-decoration: none;       /* 下線を消す */
+    cursor: pointer;             /* カーソルをポインタに */
+    font-size: 14px;             /* 標準文字サイズ */
+}
+
+.btn:hover {
+    background: #e0e0e0;         /* ホバー時に少し濃いグレー */
+}
+
+/* ------------------------------
+   スレッド全体の枠
+   ------------------------------ */
+.thread-item {
+    background: #f9f9f9;         /* 背景色（淡いグレー） */
+    border: 1px solid #ccc;      /* 枠線（薄いグレー） */
+    border-radius: 6px;          /* 角を丸く */
+    padding: 14px 16px;          /* 内側余白 */
+    margin-bottom: 25px;         /* 下に間隔 */
+    overflow-wrap: break-word;   /* 折り返し */
+    word-break: break-all;       /* 強制改行 */
+}
+
+/* ------------------------------
+   スレッド上部（投稿者・日時）
+   ------------------------------ */
+.thread-header {
+    display: flex;               /* 横並び配置 */
+    justify-content: space-between; /* 左右に分割配置 */
+    align-items: center;         /* 縦中央揃え */
+    margin-bottom: 6px;          /* 下に少し余白 */
+    cursor: default;             /* ← ポインタを通常矢印に（入力不可感） */
+}
+
+.thread-meta {
+    font-weight: normal;         /* 通常の太さに */
+}
+
+.thread-date {
+    font-size: 13px;             /* 小さめ文字 */
+    color: #666;                 /* 薄めのグレー */
+    cursor: default;             /* ← ポインタを通常矢印に（入力不可感） */
+}
+
+.edited-label {
+    font-size: 11px;             /* さらに小さい文字 */
+    color: #999;                 /* 薄いグレー */
+    cursor: default;             /* ← ポインタを通常矢印に（入力不可感） */
+}
+
+/* ------------------------------
+   タイトル行
+   ------------------------------ */
+.title-divider {
+    border: none;                /* 枠線を消す */
+    border-top: 1px solid #ccc;  /* 上線のみ表示 */
+    margin: 6px 0;               /* 上下の余白 */
+}
+
+.thread-title-line {
+    font-weight: bold;           /* 太字 */
+    font-size: 18px;             /* 少し大きめ */
+    background: #fff;            /* 白背景 */
+    border-left: 4px solid #888; /* 左にラインを追加 */
+    padding: 4px 8px;            /* 内側余白 */
+    cursor: default;             /* ← ポインタを通常矢印に（入力不可感） */
+    margin-bottom: 10px;         /* 下に余白 */
+}
+
+/* ------------------------------
+   投稿本文
+   ------------------------------ */
+.thread-body p {
+    margin: 8px 0;               /* 上下余白 */
+    line-height: 1.6;            /* 行間を広く */
+    background: #f3f3f3;         /* ← 薄いグレーで“静的”に見せる */
+    border: 1px solid #ccc;      /* 枠線を淡く */
+    border-radius: 4px;          /* 角を丸く */
+    padding: 8px 10px;           /* 内側余白 */
+    white-space: pre-wrap;       /* 改行保持 */
+    overflow-wrap: break-word;   /* 折り返し */
+    word-break: break-all;       /* 強制改行 */
+    cursor: default;             /* ← ポインタを通常矢印に（入力不可感） */
+    color: #333;                 /* 標準文字色 */
+}
+
+p {
+    overflow-wrap: break-word;   /* 単語の途中でも折り返し */
+    word-break: break-all;       /* 英単語なども強制的に改行 */
+}
+
+/* ------------------------------
+   操作ボタン行（返信・編集・削除）
+   ------------------------------ */
+.thread-info {
+    display: flex;               /* 横並び配置 */
+    justify-content: space-between; /* 左右に分割 */
+    align-items: center;         /* 縦中央揃え */
+    margin-top: 8px;             /* 上に余白 */
+}
+
+.show-replies-btn {
+    padding: 4px 10px;           /* 内側余白 */
+    border: 1px solid #666;      /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    background: #f5f5f5;         /* 背景グレー */
+    cursor: pointer;             /* カーソル変更 */
+}
+
+.show-replies-btn:hover {
+    background: #e0e0e0;         /* ホバー時に背景を濃く */
+}
+
+.action-buttons {
+    display: flex;               /* 横並び配置 */
+    gap: 6px;                    /* ボタン間の間隔 */
+}
+
+/* ------------------------------
+   返信一覧
+   ------------------------------ */
+.replies-container {
+    margin-top: 10px;            /* 上に余白 */
+    padding-left: 12px;          /* 左に余白 */
+    border-left: 3px solid #aaa; /* 左線で区切る */
+    background: #fafafa;         /* 背景薄グレー */
+}
+
+.reply-item {
+    background: #fff;            /* 白背景 */
+    border: 1px solid #ddd;      /* 枠線薄グレー */
+    border-radius: 4px;          /* 角丸 */
+    padding: 8px;                /* 内側余白 */
+    margin-top: 8px;             /* 上に余白 */
+}
+
+/* ------------------------------
+   返信メタ情報（投稿者・日時）
+   ------------------------------ */
+.reply-meta {
+    display: flex;               /* 横並び配置 */
+    justify-content: space-between; /* 左右分割 */
+    flex-wrap: wrap;             /* 折り返し可 */
+    font-size: 13px;             /* 小さめ文字 */
+    color: #666;                 /* 文字色薄め */
+    margin-top: 6px;             /* 上に少し余白 */
+    cursor: default;             /* ← ポインタを通常矢印に（入力不可感） */
+}
+
+.reply-right {
+    display: flex;               /* 縦並び配置 */
+    flex-direction: column;      /* 縦方向に積む */
+    align-items: flex-end;       /* 右寄せ配置 */
+    gap: 4px;                    /* 上下の間隔 */
+}
+
+.reply-right-buttons {
+    display: flex;               /* 横並び配置 */
+    gap: 6px;                    /* ボタン間の間隔 */
+}
+
+.reply-right .edited-label {
+    font-size: 11px;             /* 小さめ文字 */
+    color: #999;                 /* 灰色 */
+}
+
+/* ------------------------------
+   返信フォーム
+   ------------------------------ */
+.reply-form {
+    display: flex;               /* 横並び配置 */
+    align-items: center;         /* 縦中央揃え */
+    gap: 8px;                    /* 要素間の間隔 */
+    margin-top: 12px;            /* 上に余白 */
+}
+
+.reply-form textarea {
+    flex: 1;                     /* 横幅を自動調整 */
+    border: 1px solid #aaa;      /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    padding: 6px;                /* 内側余白 */
+    font-size: 14px;             /* 標準サイズ */
+    resize: vertical;            /* 縦方向にのみリサイズ可 */
+}
+
+/* ------------------------------
+   編集用テキストエリア（返信編集時）
+   ------------------------------ */
+.edit-textarea {
+    width: 100%;                 /* コンテナ幅いっぱいに */
+    min-width: 100%;             /* 縮まないよう固定 */
+    box-sizing: border-box;      /* padding・borderを含めて幅指定 */
+    border: 1px solid transparent; /* 通常は枠線を見せない */
+    background: none;            /* 背景を透過（pと同じ見た目に） */
+    padding: 8px 10px;           /* 内側余白 */
+    font-size: 14px;             /* 標準文字サイズ */
+    font-family: inherit;        /* 同じフォントに統一 */
+    line-height: 1.6;            /* 行間 */
+    resize: vertical;            /* 縦方向のみサイズ変更可能 */
+    white-space: pre-wrap;       /* 改行を保持 */
+    overflow-wrap: break-word;   /* 長文折り返し */
+    word-break: break-all;       /* 英数字なども改行 */
+}
+
+.edit-textarea:focus {
+    border: 1px solid #666;      /* フォーカス時に枠線表示 */
+    background: #fff;            /* 編集中は背景を白に */
+}
+
+/* ------------------------------
+   ページネーション
+   ------------------------------ */
+.pagination {
+    text-align: center;          /* 中央寄せ */
+    margin: 30px 0;              /* 上下に余白 */
+}
+
+.pagination a,
+.pagination strong {
+    display: inline-block;       /* インラインブロック配置 */
+    padding: 6px 10px;           /* 内側余白 */
+    margin: 0 3px;               /* 間隔 */
+    border: 1px solid #aaa;      /* 枠線 */
+    border-radius: 3px;          /* 角丸 */
+    text-decoration: none;       /* 下線を消す */
+    color: #222;                 /* 文字色 */
+}
+
+.pagination strong {
+    background: #e0e0e0;         /* 現在ページを強調背景 */
+}
+
+/* ------------------------------
+   ソートセレクト（並び替え）
+   ------------------------------ */
+.sort-controls-inline {
+    display: flex;               /* 横並び配置 */
+    align-items: center;         /* 縦中央揃え */
+    gap: 6px;                    /* 要素間の間隔 */
+}
+
+.sort-select {
+    padding: 6px 10px;           /* 内側余白 */
+    border: 1px solid #666;      /* 枠線 */
+    border-radius: 4px;          /* 角を丸く */
+    background: #fff;            /* 背景白 */
+    font-size: 14px;             /* 文字サイズ */
+    cursor: pointer;             /* カーソル変更 */
+}
+
+.sort-select:hover {
+    background: #f5f5f5;         /* ホバー時背景変更 */
+}
+
+/* ------------------------------
+   エラーメッセージ
+   ------------------------------ */
+.error {
+    color: #b00020;              /* 赤文字（エラー強調） */
+    text-align: center;          /* 中央寄せ */
+    margin-top: 20px;            /* 上に余白 */
+}
