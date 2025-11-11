@@ -11,6 +11,8 @@ require_login();
     <link rel="stylesheet" href="style_profiles.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <script src="common.js"></script>
 </head>
 <body>
     <div class="container">

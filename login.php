@@ -65,6 +65,8 @@ header('Content-Type: text/html; charset=UTF-8');
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style_login.css">
+  <link rel="stylesheet" href="common.css">
+  <script src="common.js"></script>
 </head>
 <body>
   <div class="page-wrapper">

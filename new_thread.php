@@ -19,6 +19,8 @@ $token = $_SESSION['form_token'];
     <title>新規スレッド作成</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style_new_thread.css">
+    <link rel="stylesheet" href="common.css">
+    <script src="common.js"></script>
 </head>
 <body>
     <div class="container">

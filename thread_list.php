@@ -48,6 +48,8 @@ require_login(); // ログインしていない場合はlogin.phpにリダイレ
     <link rel="stylesheet" href="style_thread.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <script src="common.js"></script>
 </head>
 <body>
     <div class="container">
